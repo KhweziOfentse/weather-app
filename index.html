@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>🌥️ Weather App</title>
   </head>
   <body>
@@ -13,14 +14,15 @@
             type="search"
             placeholder="Enter a city"
             required
-            id="search"
+            class="search-input"
           />
-          <input type="submit" value="SEARCH" id="search-button" />
+          <input type="submit" value="SEARCH" class="search-button" />
         </form>
       </header>
       <main>
-        <div>
-          <h1>Paris</h1>
+        <div class="weather-app-data">
+        <div class="current-weather-stats">
+          <h1 class="current-city">Paris</h1>
           <p class="current-date">
             <span class="current-day">Wednesday</span>
             <span class="current-time">10:28</span>,
@@ -35,6 +37,7 @@
           <span class="current-weather-unit">21</span>
           <span class="current-weather-degrees">°C</span>
         </div>
+    </div>
       </main>
       <footer>
         👩‍💻Coded by

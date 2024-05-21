@@ -1,0 +1,15 @@
+body {
+  background-color: white;
+}
+h1 {
+  color: black;
+}
+.current-date {
+  background-color: ;
+}
+.weather-app {
+  background-color: ;
+  margin: 30px auto;
+  max-width: 600px;
+  padding: 30px;
+}
