@@ -6,37 +6,51 @@
     <title>🌥️ Weather App</title>
   </head>
   <body>
-    <header>
-      <form>
-        <input type="search" placeholder="Enter a city" required />
-        <input type="submit" value="SEARCH" />
-      </form>
-    </header>
-    <main>
-      <div>
-        <h1>Paris</h1>
-        <p>
-          Wednesday 10:28, Windy with a touch of rain
-          <br />
-          humidity: 30%, Wind: 20km/h.
-        </p>
-      </div>
-      <div>🌥️ 21°C</div>
-    </main>
-    <footer>
-      👩‍💻Coded by
-      <a href="https://github.com/KhweziOfentse" target="_blank"
-        >Ofentse Mahlangu</a
-      >
-      and is open-sourced on
-      <a href="https://github.com/KhweziOfentse/weather-app" target="_blank"
-        >GitHub</a
-      >
-      and hosted on
-      <a href="https://khweziofentse-weather-app.netlify.app/" target="_blank"
-        >Netlify</a
-      >
-      💫
-    </footer>
+    <div class="weather-app">
+      <header>
+        <form>
+          <input
+            type="search"
+            placeholder="Enter a city"
+            required
+            id="search"
+          />
+          <input type="submit" value="SEARCH" id="search-button" />
+        </form>
+      </header>
+      <main>
+        <div>
+          <h1>Paris</h1>
+          <p class="current-date">
+            <span class="current-day">Wednesday</span>
+            <span class="current-time">10:28</span>,
+            <span class="current-description">Windy with a touch of rain</span>
+            <br />
+            humidity: <span class="current-humidity">30%</span>, Wind:
+            <span class="current-wind">20km/h</span>.
+          </p>
+        </div>
+        <div class="current-weather">
+          <span class="current-weather-emoji">🌥️</span>
+          <span class="current-weather-unit">21</span>
+          <span class="current-weather-degrees">°C</span>
+        </div>
+      </main>
+      <footer>
+        👩‍💻Coded by
+        <a href="https://github.com/KhweziOfentse" target="_blank"
+          >Ofentse Mahlangu</a
+        >
+        and is open-sourced on
+        <a href="https://github.com/KhweziOfentse/weather-app" target="_blank"
+          >GitHub</a
+        >
+        and hosted on
+        <a href="https://khweziofentse-weather-app.netlify.app/" target="_blank"
+          >Netlify</a
+        >
+        💫
+      </footer>
+    </div>
   </body>
 </html>
