@@ -2,9 +2,20 @@ function refreshWeather(response) {
   let temperatureElement = document.querySelector("#temperature");
   let temperature = Math.round(response.data.temperature.current);
   let cityElement = document.querySelector(".current-city");
+  let humidityElement = document.querySelector("#humidity");
+  let humidity = response.data.temperature.humidity;
+  let descriptionElement = document.querySelector(".current-description");
+  let windElement = document.querySelector("#wind");
+  let windSpeed = response.data.wind.speed;
+  let dateElement = document.querySelector(".current-date");
+  let currentDate = new Date(response.data.time * 1000);
 
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = temperature;
+  descriptionElement.innerHTML = response.data.condition.description;
+  humidityElement.innerHTML = humidity + "%";
+  windElement.innerHTML = windSpeed + "km/h";
+  dateElement.innerHTML = formatDate(currentDate);
 }
 
 function searchCity(city) {
@@ -18,6 +29,31 @@ function search(event) {
   let searchInput = document.querySelector(".search-input");
 
   searchCity(searchInput.value);
+}
+
+function formatDate(date) {
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return day + " " + hours + ":" + minutes;
 }
 
 let searchFormElement = document.querySelector("#search-form");
