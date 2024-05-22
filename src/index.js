@@ -9,13 +9,16 @@ function refreshWeather(response) {
   let windSpeed = response.data.wind.speed;
   let dateElement = document.querySelector(".current-date");
   let currentDate = new Date(response.data.time * 1000);
-
+  let iconElement = document.querySelector("#icon");
+  
+  
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = temperature;
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = humidity + "%";
   windElement.innerHTML = windSpeed + "km/h";
   dateElement.innerHTML = formatDate(currentDate);
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
 }
 
 function searchCity(city) {
