@@ -109,15 +109,19 @@ footer {
 .forecast-icon {
   font-size: 38px;
   text-align: center;
+  margin-top: 15px;
 }
 .forecast-temperatures {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 15px;
   display: flex;
   justify-content: center;
   color: #f65282;
 }
 
-.forecast-max .forecast-min {
+.forecast-max {
+  padding: 0 10px;
+}
+.forecast-min {
   padding: 0 10px;
 }

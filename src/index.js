@@ -10,8 +10,7 @@ function refreshWeather(response) {
   let dateElement = document.querySelector(".current-date");
   let currentDate = new Date(response.data.time * 1000);
   let iconElement = document.querySelector("#icon");
-  
-  
+
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = temperature;
   descriptionElement.innerHTML = response.data.condition.description;
@@ -59,7 +58,33 @@ function formatDate(date) {
   return day + " " + hours + ":" + minutes;
 }
 
+function displayForecast() {
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+      <div class="forecast-date">
+        <div class="forecast-day">${day}</div>
+        <div class="forecast-icon">🌤️</div>
+        <div class="forecast-temperatures">
+          <div class="forecast-max">
+            <strong>15º</strong>
+          </div>
+          <div class="forecast-min">9º</div>
+        </div>
+      </div>
+    `;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", search);
 
 searchCity("Pretoria");
+displayForecast();
