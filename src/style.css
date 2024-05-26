@@ -107,9 +107,10 @@ footer {
   margin-bottom: 10px;
 }
 .forecast-icon {
-  font-size: 38px;
-  text-align: center;
-  margin-top: 15px;
+  width: 88px;
+  height: 88px;
+  display: block;
+  margin: 0 auto;
 }
 .forecast-temperatures {
   text-align: center;
